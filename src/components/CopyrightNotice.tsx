@@ -1,3 +1,5 @@
+import { stringify } from "querystring";
+
 interface CopyrightNoticeProps {
   // ? makes a property optional: https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties
   author?: string;

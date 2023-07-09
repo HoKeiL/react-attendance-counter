@@ -21,14 +21,15 @@ export default function AttendanceTracker(): JSX.Element {
     // since 0 does not depend on the value of prev at all
   };
 
-    return (
-      <>
-        <p>Attendance count: {attendanceCount}</p>
-        {attendanceCount < 0 && <p>Negative attendance? Are you sure?</p>}
-        <button onClick={handleRemoveAttendee}>-1</button>
-        <button onClick={handleAddAttendee}>+1</button>
-        {attendanceCount < 0 && <button onClick={handleResetAttendance}>Reset attendance</button>}
-      </>
-    );
-  }
-
+  return (
+    <>
+      <p>Attendance count: {attendanceCount}</p>
+      {attendanceCount < 0 && <p>Negative attendance? Are you sure?</p>}
+      <button onClick={handleRemoveAttendee}>-1</button>
+      <button onClick={handleAddAttendee}>+1</button>
+      {attendanceCount < 0 && (
+        <button onClick={handleResetAttendance}>Reset attendance</button>
+      )}
+    </>
+  );
+}
